@@ -1,0 +1,463 @@
+/* CSS declarations go here */
+body {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+    font-family: 'Helvetica';
+    background: white;
+
+}
+nav {
+  display: block;
+}
+.map-container {
+  display: block;
+}
+.map {
+  display: block;
+  height: 500px;
+  border: 1px solid black;
+}
+
+#logo-hold {
+    position: fixed;
+    width: 100%;
+    padding: 0;
+    top: 400px;
+    text-align: center;
+}
+
+.logo-font {
+    width: 90%;
+    max-width: 500px;
+    border-top: 5px dashed rgba(255, 255, 255, 1);
+}
+
+@-webkit-keyframes bobble {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: 2px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@-moz-keyframes bobble {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: 2px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+#cube-canvas {
+    position: fixed;
+    width: 100%;
+    margin: 0 auto;
+    -webkit-perspective: 1000px;
+    -webkit-perspective-origin: 50% 50%;
+    -moz-perspective: 1000px;
+    -moz-perspective-origin: 50% 50%;
+    display: block;;
+    z-index: 51;
+}
+
+/*.ex {
+  height: 1000px;
+}*/
+
+#cube {
+    position: relative;
+    margin: 0 auto;
+    height: 100px;
+    width: 100%;
+    margin: 0 auto;
+    top: 0;
+    transition: 1s linear;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -webkit-transform: rotateY(0deg);
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateY(0deg);
+    -moz-transform: rotateX(0deg);
+}
+
+.face {
+    display: block;
+    position: fixed;
+    height: 100px;
+    width: 180px;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, .3);
+    /*background-color: red;*/
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+}
+
+#cube .one  {
+    -webkit-transform: rotateX(90deg) translateZ(50px);
+    -moz-transform: rotateX(90deg) translateZ(50px);
+    width: 100%;
+    height: 100px;
+    color: white;
+}
+
+#cube .two {
+    -webkit-transform: translateZ(50px);
+    -moz-transform: translateZ(50px);
+    width: 100%;
+    padding: 0;
+    background: red;
+}
+
+#cube .three {
+  -webkit-transform: rotateY(90deg) translateZ(1230px);
+  -moz-transform: rotateY(90deg) translateZ(1230px);
+    width: 100px;
+}
+
+#cube .four {
+  -webkit-transform: rotateY(-180deg) translateZ(40px);
+  -moz-transform: rotateY(-180deg) translateZ(40px);
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    background-color: blue;
+    -webkit-outline: 1px solid transparent;
+}
+
+#cube .five {
+    -webkit-transform: rotateY(-90deg) translateZ(50px);
+    -moz-transform: rotateY(-90deg) translateZ(50px);
+    width: 100px;
+}
+
+#cube .six {
+    -webkit-transform: rotateX(-90deg) translateZ(50px) rotate(180deg);
+    -moz-transform: rotateX(-90deg) translateZ(50px) rotate(180deg);
+    width: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, .3);
+    overflow: hidden;
+    padding: 0;
+    background-color: red;
+    /*border-top:5px dashed rgba(255, 255, 255, 1);*/
+}
+
+.four>ul{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+}
+
+.logo {
+    position: relative;
+    display: inline;
+    left: 40px;
+    height: 100;
+    float: left;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+}
+
+.logo.back{
+    position: relative;
+    display: inline;
+    left: -40px;
+    height: 100;
+    top: 0px;
+    float: right;
+    -webkit-transform: rotate(180deg);
+    -webkit-transition: 1s;
+    -moz-transform: rotate(180deg);
+    -moz-transition: 1s;
+    outline: 1px solid transparent;
+    -webkit-backface-visibility: hidden;
+}
+
+.logo-line {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    list-style: none;
+    left: 15px;
+    overflow: hidden;
+}
+
+.logo-line li {
+    display: inline-block;
+}
+
+.logo.bottom {
+    position: relative;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    left: -50px;
+}
+
+.logo:hover {
+    opacity: .2;
+}
+.menu-icon{
+    position: relative;
+    display: inline-block;
+    float: right;
+    top: 30px;
+    right: 25px;
+    cursor: pointer;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+}
+.menu-icon.back{
+    display: inline-block;
+    right: -27px;
+    top: 10px;
+    cursor: pointer;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+}
+.menu-icon:hover{
+    opacity: .2;
+}
+
+.menu-ops {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    padding-top: 100px;
+    background: rgba(0, 0, 0, .9);
+    display: none;
+}
+
+.nav-list {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+
+}
+.nav-list li {
+    margin-bottom: 10px;
+}
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+}
+
+li a{
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+}
+
+li a:hover {
+    opacity: .5;
+}
+
+.soc-icons{
+    float: right;
+}
+
+.soc-icons li {
+    display: inline;
+}
+
+.soc-list {
+    position: absolute;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.desk-nav-list{
+    display: none;
+}
+
+.soc {
+    width: 25px;
+    height: 25px;
+    margin: 0 auto 10px;
+    outline: 1px solid transparent;
+    -webkit-backface-visibility: hidden;
+}
+.desk-soc.front {
+    float: right;
+    margin-right: 8px;
+}
+.desk-soc.back{
+    float: right;
+    margin-right: 8px;
+}
+
+.modeling {
+    position: absolute;
+    top: 800px;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    display: none;
+}
+
+.modeling li {
+    opacity: 0;
+    padding: 0;
+}
+
+.about-page{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .9);
+    color: white;
+    z-index: 400;
+    display: none;
+}
+.about-page h1 {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    top: 200px;
+}
+.about-page p {
+    position: relative;
+    padding: 20px;
+    top: 200px;
+    font-size: .8em;
+}
+
+.ex-out {
+    position: relative;
+    cursor: pointer;
+    width: auto;
+    display: inline;
+    top: 20px;
+}
+
+.content {
+  width: 100%;
+  height: 1000px;
+}
+
+@media screen and (min-width: 400px) and (max-width: 653px){
+    .menu-icon{
+    position: relative;
+    display: inline-block;
+    float: right;
+    top: 30px;
+    right: 25px;
+    cursor: pointer;
+    -webkit-transition: .5s;
+    }
+    .menu-icon.back{
+    display: inline-block;
+    float: left;
+    right: -27px;
+    top: 10px;
+    cursor: pointer;
+    -webkit-transition: .5s;
+    }
+}
+
+@media screen and (min-width: 653px) {
+    .menu-icon, .menu-icon.back{
+        display: none;
+    }
+    .menu-ops{
+    z-index: -400;
+    opacity: 0;
+    }
+
+    .nav-list, .soc-list {
+        display: none;
+    }
+
+    .desk-nav-list.flip{
+        height: 90%;
+        width: 80%;
+        top: -27px;
+        left: 80px;
+    }
+    .desk-nav-list {
+        width: 80%;
+        position: absolute;
+        color: white;
+        display: block;
+        list-style: none;
+        margin: 0 auto;
+        top: 40px;
+        left: 120px;
+        text-align: left;
+    }
+    .desk-nav-list>li {
+        display: inline;
+        font-size: .3em;
+        bottom: 0;
+    }
+    .desk-nav-list li a{
+        color: white;
+        text-decoration: none;
+    }
+    .soc-icons{
+        position: relative;
+        display: inline-block;
+        margin: 0;
+        padding:0;
+        top: 20px;
+    }
+    .soc-icons li {
+        display: inline-block;
+        margin: 0 auto;
+        bottom: 0;
+    }
+}
+
+@media screen and (min-width: 650px) {
+
+}
+
+@media screen and (min-width: 772px){
+    .menu-ops, .menu-icon, .menu-icon.back {
+    display: none;
+    }
+
+    .desk-nav-list {
+        width: 80%;
+        position: absolute;
+        color: white;
+        display: block;
+        list-style: none;
+        margin: 0 auto;
+        top: 40px;
+        left: 120px;
+        text-align: left;
+    }
+    .desk-nav-list>li {
+        display: inline;
+        font-size: .8em;
+        bottom: 0;
+    }
+    .desk-nav-list li a{
+        color: white;
+        text-decoration: none;
+    }
+    .soc-icons{
+        position: relative;
+        display: inline-block;
+        margin: 0;
+        padding:0;
+        top: 20px;
+    }
+    .soc-icons li {
+        display: inline-block;
+        margin: 0 auto;
+        bottom: 0;
+    }
+}
