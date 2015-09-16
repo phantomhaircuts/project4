@@ -18,7 +18,9 @@ if (Meteor.isClient) {
         // Insert a task into the collection
         Comments.insert({
           text: text,
-          createdAt: new Date() // current time
+          createdAt: new Date(),            // current time
+          owner: Meteor.userId(),           // _id of logged in user
+          username: Meteor.user().username  // username of logged in user
         });
 
         // Clear form
@@ -31,12 +33,7 @@ if (Meteor.isClient) {
       Comments.remove(this._id);
     }
   });
-  Template.map.rendered = function() {
-    L.Icon.Default.imagePath = 'http://crcv.ucf.edu/people/phd_students/mahdi/images/map_icon.svg';
-    map = L.map("map").setView([38.897604, -76.9912402], 16);
-    L.tileLayer('https://api.tiles.mapbox.com/v4/phantomhaircuts.1a4dda09/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoicGhhbnRvbWhhaXJjdXRzIiwiYSI6Ijc4NzQzY2IyOTg4NzVhNWFlNzJkZjI5Y2FjNmE3NzNmIn0.1jakhTTyrFLd70ccY0wkRw', {
-    maxZoom: 20
-    }).addTo(map);
-    L.marker([38.897604, -76.9912402]).addTo(map);
-  };
+  Accounts.ui.config({
+    passwordSignupFields: "USERNAME_ONLY"
+  });
 }
