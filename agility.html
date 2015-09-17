@@ -28,11 +28,11 @@
     </aside>
   </div>
   {{else}}
-      <video autoplay loop id="vid">
-        <source src="images/ink-lopp" type="video/ogv">
-        <source src="images/ink-lopp.mp4" type="video/mp4">
-        <source src="images/ink-lopp.m4v" type="video/m4v">
-        <source src="images/ink-lopp.mov" type="video/mov">
+      <video autoplay loop id="vid" controls muted>
+        <source src="images/splashvid.mov" type="video/ogv">
+        <source src="images/musicvideo.mp4" type="video/mp4">
+        <!-- <source src="images/ink-lopp.m4v" type="video/m4v"> -->
+        <source src="images/splashvid.mov" type="video/mov">
       </video>
       <h1 class="welcome">WELCOME</h1>
       <span class="welcome-login"> {{> loginButtons}} </span>
