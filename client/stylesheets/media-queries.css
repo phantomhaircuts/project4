@@ -1,1 +1,38 @@
- 
+@media screen and (min-width: 772px){
+    .menu-ops, .menu-icon, .menu-icon.back {
+    display: none;
+    }
+
+    .desk-nav-list {
+        width: 80%;
+        position: absolute;
+        display: block;
+        list-style: none;
+        margin: 0 auto;
+        top: 40px;
+        left: 120px;
+        text-align: left;
+    }
+    .desk-nav-list>li {
+        display: inline;
+        font-size: .8em;
+        bottom: 0;
+    }
+    .desk-nav-list li a{
+        color: black;
+        font-size: 30px;
+        text-decoration: none;
+    }
+    .soc-icons{
+        position: relative;
+        display: inline-block;
+        margin: 0;
+        padding:0;
+        top: 20px;
+    }
+    .soc-icons li {
+        display: inline-block;
+        margin: 0 auto;
+        bottom: 0;
+    }
+}

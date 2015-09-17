@@ -1,0 +1,38 @@
+<template name="nav">
+      <div id="cube-container">
+        <div id="cube">
+          <div class="face one">
+          </div>
+
+          <div class="face two">
+              <ul class="desk-nav-list">
+                <li class="desk-nav"><a href="/">HOME</a></li>
+                <li class="nav about-link"><a href="/">ABOUT</a></li>
+                <li class="desk-nav"><a href="/">CONTACT</a></li>
+                <li class="login"> {{> loginButtons}} </li>
+              </ul>
+          </div>
+
+          <div class="face three">
+          </div>
+
+          <div class="face four">
+              <ul class="desk-nav-list flip">
+                  <li class="desk-nav"><a href="">HOME</a></li>
+                  <li class="nav about-link"><a href="#">ABOUT</a></li>
+                  <li class="desk-nav"><a href="#">CONTACT</a></li>
+                  <li class="login"> {{> loginButtons}} </li>
+              </ul>
+          </div>
+
+          <div class="face five">
+          </div>
+
+          <div class="face six">
+            <h1 class="logo">Meteorite Exploratory Commitee</h1>
+            <ul class="logo-line">
+            </ul>
+          </div>
+        </div>
+      </div>
+</template>
