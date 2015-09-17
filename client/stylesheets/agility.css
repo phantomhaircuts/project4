@@ -59,6 +59,13 @@ header {
   box-shadow: 0 4px 4px -2px #000000;
 }
 
+.coordinates {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  /*font-family:'Pinyon Script', cursive;*/
+  font-size: 26px;
+}
+
 .map-container {
 
 }
@@ -66,7 +73,7 @@ header {
 .map {
   width: 100%;
   margin: 0 auto;
-  height: 700px;
+  height: 500px;
   /*border: 1px solid black;*/
 }
 

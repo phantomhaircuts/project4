@@ -1,4 +1,4 @@
-// Get Current Position:
+// Initial Get Current Position:
 
 var options = {
   enableHighAccuracy: true,
@@ -46,5 +46,4 @@ Template.map.rendered = function() {
   maxZoom: 20
   }).addTo(map);
   new L.Control.Zoom({ position: 'bottomright' }).addTo(map);
-
 };
