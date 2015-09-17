@@ -34,6 +34,9 @@
     -moz-perspective-origin: 50% 50%;
     display: none;
     z-index: 51;
+    -webkit-box-shadow: 0 4px 4px -2px #000000;
+    -moz-box-shadow: 0 4px 4px -2px #000000;
+    box-shadow: 0 4px 4px -2px #000000;
 }
 
 #cube {
