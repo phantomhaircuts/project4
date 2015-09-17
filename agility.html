@@ -1,5 +1,5 @@
 <head>
-<title>Tour</title>
+<title>Meteorite Exploratory Committee</title>
 <link href='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.css' rel='stylesheet' />
 </head>
 
@@ -7,12 +7,14 @@
   <header>
     {{> nav}}
   </header>
+  {{#if currentUser}}
   <div class="HolyGrail-body">
     <main class="HolyGrail-content">
       {{> map}}
     </main>
     <nav class="HolyGrail-nav">
-      <h1>Comments</h1>
+      <h1>Notes</h1>
+
         <form class="new-comment">
           <input type="text" name="text" placeholder="Type to add new comment" />
          </form>
@@ -25,5 +27,17 @@
     <aside class="HolyGrail-ads">
     </aside>
   </div>
-  <footer></footer>
+  {{else}}
+      <video autoplay loop id="vid">
+        <source src="images/ink-lopp" type="video/ogv">
+        <source src="images/ink-lopp.mp4" type="video/mp4">
+        <source src="images/ink-lopp.m4v" type="video/m4v">
+        <source src="images/ink-lopp.mov" type="video/mov">
+      </video>
+      <h1 class="welcome">WELCOME</h1>
+      <span class="welcome-login"> {{> loginButtons}} </span>
+  {{/if}}
+  <footer>
+
+  </footer>
 </body>

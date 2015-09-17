@@ -4,6 +4,7 @@
     }
 
     .desk-nav-list {
+
         width: 80%;
         position: absolute;
         display: block;
@@ -19,20 +20,88 @@
         bottom: 0;
     }
     .desk-nav-list li a{
-        color: black;
-        font-size: 30px;
-        text-decoration: none;
+      position: relative;
+    	display: inline-block;
+    	margin: 15px 25px;
+    	outline: none;
+    	color: black;
+    	text-decoration: none;
+    	text-transform: uppercase;
+    	letter-spacing: 1px;
+    	font-weight: 400;
+    	text-shadow: 0 0 1px rgba(255,255,255,0.3);
+    	font-size: 1.35em;
     }
-    .soc-icons{
-        position: relative;
-        display: inline-block;
-        margin: 0;
-        padding:0;
-        top: 20px;
+    nav a:hover, nav a:focus {
+	  outline: none;
     }
-    .soc-icons li {
-        display: inline-block;
-        margin: 0 auto;
-        bottom: 0;
-    }
+
+  .effect-18 {
+  	position: relative;
+  	z-index: 1;
+  }
+
+  .cl-effect-18 a {
+  	padding: 0 5px;
+  	color: #b4770d;
+  	font-weight: 700;
+  	-webkit-transition: color 0.3s;
+  	-moz-transition: color 0.3s;
+  	transition: color 0.3s;
+  }
+
+  .cl-effect-18 a::before,
+  .cl-effect-18 a::after {
+  	position: absolute;
+  	width: 100%;
+  	left: 0;
+  	top: 50%;
+  	height: 2px;
+  	margin-top: -1px;
+  	background: black;
+  	content: '';
+  	z-index: -1;
+  	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+  	transition: transform 0.3s, opacity 0.3s;
+  	pointer-events: none;
+  }
+
+  .cl-effect-18 a::before {
+  	-webkit-transform: translateY(-20px);
+  	-moz-transform: translateY(-20px);
+  	transform: translateY(-20px);
+  }
+
+  .cl-effect-18 a::after {
+  	-webkit-transform: translateY(20px);
+  	-moz-transform: translateY(20px);
+  	transform: translateY(20px);
+  }
+
+  .cl-effect-18 a:hover,
+  .cl-effect-18 a:focus {
+  	color: white;
+  }
+
+  .cl-effect-18 a:hover::before,
+  .cl-effect-18 a:hover::after,
+  .cl-effect-18 a:focus::before,
+  .cl-effect-18 a:focus::after {
+  	opacity: 0.7;
+  }
+
+  .cl-effect-18 a:hover::before,
+  .cl-effect-18 a:focus::before {
+  	-webkit-transform: rotate(45deg);
+  	-moz-transform: rotate(45deg);
+  	transform: rotate(45deg);
+  }
+
+  .cl-effect-18 a:hover::after,
+  .cl-effect-18 a:focus::after {
+  	-webkit-transform: rotate(-45deg);
+  	-moz-transform: rotate(-45deg);
+  	transform: rotate(-45deg);
+  }
 }

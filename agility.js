@@ -1,6 +1,9 @@
 Comments = new Mongo.Collection("comments");
 
 if (Meteor.isClient) {
+
+  Meteor.subscribe("comments");
+
   Template.body.helpers({
     comments: function () {
       return Comments.find({}, {sort: {createdAt: -1}});

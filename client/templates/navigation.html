@@ -5,11 +5,13 @@
           </div>
 
           <div class="face two">
-              <ul class="desk-nav-list">
-                <li class="desk-nav"><a href="/">HOME</a></li>
-                <li class="nav about-link"><a href="/">ABOUT</a></li>
-                <li class="desk-nav"><a href="/">CONTACT</a></li>
+              <ul class="desk-nav-list cl-effect-18">
+                <li class="desk-nav nav-link"><a href="/">HOME</a></li>
+                <li class="nav about-link nav-link"><a href="/">ABOUT</a></li>
+                <li class="desk-nav nav-link"><a href="/">CONTACT</a></li>
+                {{#if currentUser}}
                 <li class="login"> {{> loginButtons}} </li>
+                {{/if}}
               </ul>
           </div>
 
@@ -17,11 +19,13 @@
           </div>
 
           <div class="face four">
-              <ul class="desk-nav-list flip">
+              <ul class="desk-nav-list flip cl-effect-18">
                   <li class="desk-nav"><a href="">HOME</a></li>
                   <li class="nav about-link"><a href="#">ABOUT</a></li>
                   <li class="desk-nav"><a href="#">CONTACT</a></li>
+                {{#if currentUser}}
                   <li class="login"> {{> loginButtons}} </li>
+                {{/if}}
               </ul>
           </div>
 

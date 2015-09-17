@@ -1,5 +1,7 @@
+/*Import Fonts*/
 @import url(https://fonts.googleapis.com/css?family=Pinyon+Script);
 
+/*Begin 3d Nav*/
 @-webkit-keyframes bobble {
     0% {
         top: 0;
@@ -151,97 +153,41 @@
     -webkit-backface-visibility: hidden;
 }
 
-.menu-icon{
-    position: relative;
-    display: inline-block;
-    float: right;
-    top: 30px;
-    right: 25px;
-    cursor: pointer;
-    -webkit-transition: .5s;
-    -moz-transition: .5s;
-}
-.menu-icon.back{
-    display: inline-block;
-    right: -27px;
-    top: 10px;
-    cursor: pointer;
-    -webkit-transition: .5s;
-    -moz-transition: .5s;
-}
-.menu-icon:hover{
-    opacity: .2;
-}
-
-.menu-ops {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    padding-top: 100px;
-    background: rgba(0, 0, 0, .9);
-    display: none;
-}
-
 .nav-list {
     position: relative;
     width: 100%;
     list-style: none;
     text-align: center;
     padding: 0;
-
 }
+
 .nav-list li {
     margin-bottom: 10px;
 }
 .nav-list li a {
-    /*color: white;*/
     text-decoration: none;
 }
 
 li a{
-    -webkit-transition: .5s;
-    -moz-transition: .5s;
-}
-
-li a:hover {
-    opacity: .5;
-}
-
-.soc-icons{
-    float: right;
-}
-
-.soc-icons li {
-    display: inline;
-}
-
-.soc-list {
-    position: absolute;
-    width: 100%;
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
+  position: relative;
+  display: inline-block;
+  margin: 15px 25px;
+  outline: none;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-shadow: 0 0 1px rgba(255,255,255,0.3);
+  font-size: 1.35em;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
 }
 
 .desk-nav-list{
     display: block;
 }
 
-.soc {
-    width: 25px;
-    height: 25px;
-    margin: 0 auto 10px;
-    outline: 1px solid transparent;
-    -webkit-backface-visibility: hidden;
-}
-.desk-soc.front {
-    float: right;
-    margin-right: 8px;
-}
-.desk-soc.back {
-    float: right;
-    margin-right: 8px;
-}
 .logo {
   font-family: 'Pinyon Script', cursive;
   -webkit-transform:rotate(-180deg);
