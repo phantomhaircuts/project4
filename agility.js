@@ -1,4 +1,5 @@
 Comments = new Mongo.Collection("comments");
+Pins = new Mongo.Collection("pins")
 
 if (Meteor.isClient) {
 
@@ -15,10 +16,10 @@ if (Meteor.isClient) {
         // Prevent default browser form submit
         event.preventDefault();
 
-        // Get value from form element
+        // GET a value from form
         var text = event.target.text.value;
 
-        // Insert a task into the collection
+        // ADD a Comment into the collection
         Comments.insert({
           text: text,
           createdAt: new Date(),            // current time

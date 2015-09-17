@@ -30,6 +30,11 @@ body {
   font-size: 200px;
 }
 
+.letter:hover {
+  color: #759F89;
+  cursor: default;
+}
+
 .welcome-login {
   margin: 0 auto;
 }
