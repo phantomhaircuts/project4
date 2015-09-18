@@ -10,7 +10,7 @@ var options = {
 
 function success(pos) {
   var crd = pos.coords;
-  var userLoc = [crd.latitude, crd.longitude];
+  userLoc = [crd.latitude, crd.longitude];
   var latitude = crd.latitude;
   var longitude = crd.longitude;
   $(".userloc").text("Lat is:" + latitude + " and Long is " + longitude)
@@ -49,4 +49,10 @@ Template.map.rendered = function() {
   maxZoom: 20
   }).addTo(map);
   // new L.Control.Zoom({ position: 'bottomright' }).addTo(map);
+  // Pins.find({}).observe({})
 };
+
+//Map Pins functions
+// Pins.find({}).observe({})
+// L.marker(Pins.pinLoc, {
+// }).addTo(map);

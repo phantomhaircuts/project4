@@ -8,24 +8,41 @@ if (Meteor.isClient) {
     e.preventDefault();
     console.log("burrito button has been pressed.");
 
+    // Initial Get Current Position:
 
     var options = {
       enableHighAccuracy: true,
-      timeout: 5000,
+      timeout: 10000,
       maximumAge: 0
     };
 
-    function success(position) {
-      var latitude  = position.coords.latitude;
-      var longitude = position.coords.longitude;
+    // If Position can be located:
+
+    function success(pos) {
+      var crd = pos.coords;
+      var userLoc = [crd.latitude, crd.longitude];
+      var latitude = crd.latitude;
+      var longitude = crd.longitude;
       $(".userloc").text("Lat is:" + latitude + " and Long is " + longitude)
-      console.log('New Current Location. Lat is ' + latitude + ' Long is ' + longitude);
+      console.log('User Position is at: ' + userLoc);
+      console.log('Your current position is:');
+      console.log('Latitude : ' + crd.latitude);
+      console.log('Longitude: ' + crd.longitude);
+      console.log('Accurate within about: ' + crd.accuracy + ' meters.');
+
+     //Add current Position marker
+
+      L.marker(userLoc, {
+        icon: temp_icon
+      }).addTo(map);
     };
 
-    function error() {
-      console.log("Unable to retrieve your location");
-    }
-    navigator.geolocation.getCurrentPosition(success, error, options);
+    // If Position cannot be located:
+    function error(err) {
+      console.warn('ERROR(' + err.code + '): ' + err.message);
+    };
+    // Find Position
+    navigator.geolocation.watchPosition(success, error, options);
   },
 
   //about page display function
@@ -41,13 +58,6 @@ if (Meteor.isClient) {
     console.log("not about a burrito.");
     $(".about-page").css("display", "none").fadeout(2000)
   }
-});
-
-Template.body.events({
-'click .pin': function (e) {
-  e.preventDefault();
-  console.log("burrito 2 button has been pressed.");
-}
 });
 
   Meteor.subscribe("comments");
