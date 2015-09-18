@@ -1,6 +1,20 @@
 Comments = new Mongo.Collection("comments");
 if (Meteor.isClient) {
 
+  Template.body.events({
+  'click .locator': function (e) {
+    e.preventDefault();
+    console.log("burrito button has been pressed.");
+  }
+});
+
+Template.body.events({
+'click .pin': function (e) {
+  e.preventDefault();
+  console.log("burrito 2 button has been pressed.");
+}
+});
+
   Meteor.subscribe("comments");
 
   Template.body.helpers({

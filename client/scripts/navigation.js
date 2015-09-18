@@ -11,6 +11,9 @@ var options = {
 function success(pos) {
   var crd = pos.coords;
   var userLoc = [crd.latitude, crd.longitude];
+  var latitude = crd.latitude;
+  var longitude = crd.longitude;
+  $(".userloc").text("Lat is:" + latitude + " and Long is " + longitude)
   console.log('User Position is at: ' + userLoc);
   console.log('Your current position is:');
   console.log('Latitude : ' + crd.latitude);
@@ -45,5 +48,5 @@ Template.map.rendered = function() {
   L.tileLayer('https://api.tiles.mapbox.com/v4/phantomhaircuts.1a4dda09/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoicGhhbnRvbWhhaXJjdXRzIiwiYSI6Ijc4NzQzY2IyOTg4NzVhNWFlNzJkZjI5Y2FjNmE3NzNmIn0.1jakhTTyrFLd70ccY0wkRw', {
   maxZoom: 20
   }).addTo(map);
-  new L.Control.Zoom({ position: 'bottomright' }).addTo(map);
+  // new L.Control.Zoom({ position: 'bottomright' }).addTo(map);
 };
