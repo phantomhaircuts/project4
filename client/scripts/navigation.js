@@ -9,6 +9,10 @@ var options = {
 // If Position can be located:
 
 function success(pos) {
+  temp_icon = L.icon({
+    iconUrl: "http://i.imgur.com/gtfSEkP.png",
+    iconSize: [22, 27]
+  });
   var crd = pos.coords;
   userLoc = [crd.latitude, crd.longitude];
   var latitude = crd.latitude;
@@ -34,24 +38,13 @@ function error(err) {
 // Find Position
 navigator.geolocation.watchPosition(success, error, options);
 
-
-// Create Map Markers
-
-Template.map.created = function() {
-  // Pins.find({}).observe({
-  //   added: function(pin) {
-  //     L.Marker(pin.pinLoc, {
-  //     icon: temp_icon
-  //     }).addTo(map)
-};
-
 //Render Map
 Template.map.rendered = function() {
   console.log("-----Rendering Map-----")
   temp_icon = L.icon({
     iconUrl: "http://i.imgur.com/gtfSEkP.png",
     iconSize: [22, 27]
-  })
+  });
   // L.Icon.Default.imagePath = 'http://api.tiles.mapbox.com/mapbox.js/'
   map = L.map("map", { zoomControl: false }).setView([38.897604, -76.9912402], 13);
   L.tileLayer('https://api.tiles.mapbox.com/v4/phantomhaircuts.1a4dda09/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoicGhhbnRvbWhhaXJjdXRzIiwiYSI6Ijc4NzQzY2IyOTg4NzVhNWFlNzJkZjI5Y2FjNmE3NzNmIn0.1jakhTTyrFLd70ccY0wkRw', {
@@ -59,3 +52,22 @@ Template.map.rendered = function() {
   }).addTo(map);
   // new L.Control.Zoom({ position: 'bottomright' }).addTo(map);
 };
+
+// Create Map Markers
+// Template.map.created = function() {
+//   function addPinsToMap() {
+//     temp_icon = L.icon({
+//       iconUrl: "http://i.imgur.com/gtfSEkP.png",
+//       iconSize: [22, 27]
+//     });
+//     var pins = Pins.find().fetch();
+//     console.log("-----------")
+//     console.log(pins)
+//     pins.forEach(function(pinObject){
+//       L.marker(pin.pinLoc, {
+//         icon: temp_icon
+//       }).addTo(map);
+//     })
+//   }
+//  addpinsToMap()
+// }
