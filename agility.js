@@ -2,9 +2,44 @@ Comments = new Mongo.Collection("comments");
 if (Meteor.isClient) {
 
   Template.body.events({
+
+  //Update Current Location.
   'click .locator': function (e) {
     e.preventDefault();
     console.log("burrito button has been pressed.");
+
+
+    var options = {
+      enableHighAccuracy: true,
+      timeout: 5000,
+      maximumAge: 0
+    };
+
+    function success(position) {
+      var latitude  = position.coords.latitude;
+      var longitude = position.coords.longitude;
+      $(".userloc").text("Lat is:" + latitude + " and Long is " + longitude)
+      console.log('New Current Location. Lat is ' + latitude + ' Long is ' + longitude);
+    };
+
+    function error() {
+      console.log("Unable to retrieve your location");
+    }
+    navigator.geolocation.getCurrentPosition(success, error, options);
+  },
+
+  //about page display function
+  'click .about': function (e) {
+    e.preventDefault();
+    console.log("about a burrito.");
+    $(".about-page").css("display", "block").fadein(2000)
+  },
+
+  //ex-out about page function
+  'click .ex-out': function (e) {
+    e.preventDefault();
+    console.log("not about a burrito.");
+    $(".about-page").css("display", "none").fadeout(2000)
   }
 });
 

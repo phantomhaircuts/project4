@@ -43,6 +43,7 @@
   }
   .HolyGrail-nav, .HolyGrail-ads {
     /* 12em is the width of the columns */
+    margin: 5px;
     flex: 0 0 12em;
   }
 }

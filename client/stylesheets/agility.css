@@ -7,7 +7,7 @@ body {
     padding: 0;
     font-family: 'futura';
     background: white;
-    height: 1200px;
+    height: 1000px;
 }
 
 #vid {
@@ -48,18 +48,30 @@ body {
   text-decoration: none;
   font-family: 'futura';
   text-transform: capitalize;
-  margin-right: 50%;
 }
 
 .about-page{
+    background-image: url('images/seamless_paper_texture.png');
+    /*background: #c3bcb9;*/
     position: fixed;
-    height: 98%;
-    width: 98%;
-    background: rgba(0, 0, 0, .);
-    margin: 2%;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
     color: white;
-    z-index: 400;
+    z-index: 9001;
     display: none;
+}
+
+.about-page h1 {
+  text-align: center;
+}
+
+.ex-out {
+    position: relative;
+    cursor: pointer;
+    width: auto;
+    display: inline;
+    top: 20px;
 }
 
 .pin-form{
@@ -86,10 +98,15 @@ header {
 }
 
 .coordinates {
+  width: 90%;
+  margin: 0 auto;
   margin-top: 10px;
   margin-bottom: 10px;
   /*font-family:'Pinyon Script', cursive;*/
-  font-size: 26px;
+  font-size: 14px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+
 }
 
 .map-container {
@@ -97,7 +114,7 @@ header {
 }
 
 .map {
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
   height: 500px;
   /*border: 1px solid black;*/
@@ -179,4 +196,5 @@ footer {
   margin: 0 auto;
   position: fixed;
   display: block;
+  z-index: 9000;
 }
