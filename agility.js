@@ -12,7 +12,6 @@ if (Meteor.isClient) {
 
     var options = {
       enableHighAccuracy: true,
-      timeout: 10000,
       maximumAge: 0
     };
 
@@ -49,14 +48,26 @@ if (Meteor.isClient) {
   'click .about': function (e) {
     e.preventDefault();
     console.log("about a burrito.");
-    $(".about-page").css("display", "block").fadein(2000)
+    $(".about-page").css("display", "block")
+  },
+
+  'click .pins': function (e) {
+    e.preventDefault();
+    console.log("about a pinrrito.");
+    $(".pin-page").css("display", "block")
   },
 
   //ex-out about page function
   'click .ex-out': function (e) {
     e.preventDefault();
     console.log("not about a burrito.");
-    $(".about-page").css("display", "none").fadeout(2000)
+    $(".about-page").css("display", "none")
+  },
+
+  //exit pin page
+  'click .pin-out': function (e) {
+    e.preventDefault();
+    $(".pin-page").css("display", "none")
   }
 });
 

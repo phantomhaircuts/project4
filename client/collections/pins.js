@@ -30,4 +30,5 @@ if (Meteor.isClient) {
             event.target.note.value = "";
           },
         }); //End Template.body.events
-    }
+
+}

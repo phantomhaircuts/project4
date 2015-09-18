@@ -35,8 +35,17 @@ function error(err) {
 navigator.geolocation.watchPosition(success, error, options);
 
 
-// Render Map
+// Create Map Markers
 
+Template.map.created = function() {
+  // Pins.find({}).observe({
+  //   added: function(pin) {
+  //     L.Marker(pin.pinLoc, {
+  //     icon: temp_icon
+  //     }).addTo(map)
+};
+
+//Render Map
 Template.map.rendered = function() {
   console.log("-----Rendering Map-----")
   temp_icon = L.icon({
@@ -49,10 +58,4 @@ Template.map.rendered = function() {
   maxZoom: 20
   }).addTo(map);
   // new L.Control.Zoom({ position: 'bottomright' }).addTo(map);
-  // Pins.find({}).observe({})
 };
-
-//Map Pins functions
-// Pins.find({}).observe({})
-// L.marker(Pins.pinLoc, {
-// }).addTo(map);
